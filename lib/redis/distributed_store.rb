@@ -30,6 +30,10 @@ class Redis
       node_for(key).get(key, options)
     end
 
+    def setex(key, ttl, value, options = nil)
+      node_for(key).setex(key, ttl, value, options)
+    end
+
     def setnx(key, value, options = nil)
       node_for(key).setnx(key, value, options)
     end
